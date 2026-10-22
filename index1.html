@@ -1,0 +1,639 @@
+ <!-- <form name="form">
+
+<label>Name</label>
+<input type="text" name="name"> <br><br>
+
+<label>Age</label>
+<input type="text" name="age"><br><br>
+
+<label>gender<label>
+<input type="radio" name="gender"value="female" checked>female
+<input type="radio" name="gender"value="male">male <br><br>
+
+//value input la stay panna return false keyword use pannanum.
+
+<input type="submit" name="submit" onclick="show(); return false;"> <br><br>
+
+
+</form> 
+
+<script>
+
+
+function show(){
+//form access pandra method tha document.forms.
+
+var name=document.forms['form']['name'];
+if(name.value == ""){
+alert("enter name");
+return;
+}
+ var age=document.forms['form']['age'];
+if(age.value == ""){
+alert("enter age"); 
+return;
+ }
+ var gender=document.forms['form']['gender'];
+ if(gender.value == ""){
+ alert("choose gender");
+ return;
+ }
+ alert("form submitted successfully");
+ 
+}
+</script>
+<br><br>
+
+<p >$<span id="price">578</span></p>
+<button onclick="decrement()">-</button>
+<span id="count">1</span>
+<button onclick="increment()">+</button>
+
+<script>
+
+let count=1;
+let price=578;
+
+
+function increment(){
+count ++;
+document.getElementById("count").innerHTML=count;
+document.getElementById("price").innerHTML=count*price;
+
+}
+function decrement(){
+
+document.getElementById("count").innerHTML=count;
+document.getElementById("price").innerHTML=count*price;
+if(count >1){
+count --;
+}
+}
+
+</script> 
+<br><br><br>
+
+<div class="overlay"></div>
+<div class="popupbox">
+<button onclick="location.href='index1.html'">back</button>
+<p id="pname">
+<p id="pprice">
+
+</div>
+
+<div class="product">
+<div class="one">
+<div id="men">
+<h1>shirt</h1>
+<p>356</p>
+<button onclick="show('shirt',356)"> add</button>
+</div>
+</div>
+<div class="one">
+<div id="women">
+<h1>shudi</h1>
+<p>356</p>
+<button onclick="show('shudi',356)"> add</button>
+</div>
+</div>
+</div>
+
+<style>
+*{
+margin:0;
+paddinf:0;
+}
+.one{
+width:150px;
+border:2px solid;
+padding:10px;
+position:relative;
+z-index:1;
+}
+
+.overlay{
+width:100%;
+height:100%;
+top:0px;
+left:0px;
+background-color:gray;
+position:fixed;
+opacity:0.8;
+z-index:2;
+display:none;
+
+}
+
+.popupbox{
+border:2px solid;
+width:100px;
+z-index:3;
+position:absolute;
+background-color:white;
+top:50%;
+left:50%;
+display:none;
+padding:20px;
+}
+
+</style>
+
+<script>
+
+var popupoverlay=document.querySelector('.overlay');
+var popupbox=document.querySelector('.popupbox');
+
+function show(name,price){
+  pname=name;
+  pprice=price;
+  
+  document.getElementById('pname').innerHTML=name;
+  document.getElementById('pprice').innerHTML=price;
+ 
+ popupoverlay.style.display="block";
+ popupbox.style.display="block";
+ }
+
+
+
+</script> -->
+
+
+<!-- <div class="card">
+<img src="popular.jpg">
+
+<div class="overlay">
+view project
+</div>
+</div>
+
+<style>
+
+.card{
+position:relative;
+overflow:hidden;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.7);
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+transition:opacity 0.3s;
+color:white;
+}
+.overlay:hover{
+opacity:1;
+}
+
+</style> -->
+
+
+
+
+
+<!-- <input id="num1"  >
+<input id="num2" >
+<button onclick="add()">Add</button>
+<p id="result">result</p>
+
+<script>
+
+var box1=document.getElementById("num1");
+var box2=document.getElementById("num2");
+
+var result=document.getElementById("result");
+ 
+ function add(){
+   
+   var box1value=Number(box1.value)
+   var box2value=Number(box2.value)
+ 
+   total=box1value+box2value
+ 
+	result.textContent=total
+}
+
+</script> -->
+
+<!-- <h1>Guess number</h1>
+<input id="number">
+<button onclick="check()">check</button>
+<p id="result">you are right/wrong</p>
+<p id="score">score:10</p>
+
+<script>
+
+var number=document.getElementById("number")
+var result=document.getElementById("result")
+var score=document.getElementById("score")
+var randomNumber=Math.floor(Math.random()*10)+1
+var totalscore=10
+
+function check(){
+   var enterednumber=number.value
+   if(randomNumber==enterednumber)
+   {
+   console.log("right")
+   result.textContent="Right"
+   alert("you won");
+   }
+   else{
+   totalscore=totalscore-1
+   score.textContent="score:"+totalscore
+   result.textContent="Wrong"
+   }
+   }
+
+</script> -->
+ 
+<!-- <div id="box"></div>
+<button onclick="clickbox()">click</button>
+<style>
+
+#box{
+border:2px solid;
+width:100px;
+height:100px;
+background-color:blue;
+}
+
+</style>
+
+<script>
+var box=document.getElementById("box")
+function clickbox(){
+
+ box.style.backgroundColor="yellow"
+
+}
+
+</script> -->
+
+
+ <!-- <input id="inputbox" onkeyup="update()">
+
+<h1 id="result"></h1>
+
+<script>
+
+ var inputbox=document.getElementById("inputbox")
+ var result=document.getElementById("result")
+ 
+ function update(){
+ 
+ 
+ result.textContent=inputbox.value
+ }
+
+</script> -->
+
+<!-- <button  onclick="update()">Add hello</button>
+<div id="result"></div>
+
+<script>
+var div=document.getElementById("result")
+
+function update(){
+ var item=document.createElement("h1")
+ item.textContent="hello"
+ div.append(item)
+}
+
+</script> -->
+
+
+<!-- <button id="btn"onclick="update()" >change color</button>
+
+
+<script>
+var btn=document.getElementById("btn")
+function update(){
+
+btn.style.backgroundColor="red"
+}
+
+</script> -->
+
+<!-- <h1 id="result">Name</h1>
+<button onclick="update(event)">John</button>
+<button onclick="update(event)">Hari</button>
+<button onclick="update(event)">Mythily</button>
+
+<script>
+//click pannupothu antha event nadakka event handler use pannanum.
+//antha value va target panna event.target use pannanum.
+
+var h1=document.getElementById("result")
+
+function update(event){
+ 
+ h1.textContent=event.target.textContent
+ }
+
+</script> -->
+
+<!-- <h1  onclick="update(event)">one</h1>
+<h1 onclick="update(event)">two</h1>
+<h1  onclick="update(event)">three</h1>
+<h1  onclick="update(event)">four</h1>
+
+<script>
+
+function update(event){
+
+event.target.remove()
+}
+
+</script>
+
+ -->
+ <!-- <input id="input">
+<button onclick="add()">Add</button>
+<ul id="list-container">
+<li>hello
+<button onclick="deleteitem(event)">delete</button></li>
+
+</ul>
+
+
+<script>
+var input=document.getElementById("input")
+var ul=document.getElementById("list-container")
+function add(){
+
+var listitem=document.createElement("li")
+listitem.innerHTML=input.value +"<button onclick='deleteitem(event)'>delete</button>"
+ul.append(listitem)
+}
+
+function deleteitem(event){
+
+event.target.parentElement.remove()
+}
+
+</script>  -->
+
+
+<!-- Name:
+<input id="input" type="text"><br><br>
+Age:
+<input  id="age" type="number"><br><br>
+<button onclick="add()">Save</button> <br><br>
+
+<table border="1" cellpadding="10">
+<tr>
+
+<th>name</th>
+<th>age</th>
+<th>action</th>
+</tr>
+<tbody id="list-container"></tbody>
+</table>
+
+<script>
+ 
+ var input=document.getElementById("input")
+ var age=document.getElementById("age")
+ var tr=document.getElementById("list-container")
+ 
+function add(){
+ var listitem=document.createElement("tr")
+ var td1=document.createElement("td")
+ td1.textContent=input.value 
+ var td2=document.createElement("td")
+ td2.textContent=age.value 
+ var deletebtn=document.createElement("td")
+ deletebtn.innerHTML="<button>delete</button>"
+ 
+ deletebtn.onclick=function(){
+ listitem.remove()
+ }
+ 
+ listitem.append(td1)
+ listitem.append(td2)
+ listitem.append(deletebtn)
+ tr.append(listitem)
+ }
+
+</script> -->
+
+<html>
+<head>
+<title>Booksky</title>
+</head>
+<body>
+
+<nav>
+<h1>Booksky</h1>
+</nav>
+
+<div class="container">
+<div class="container-book">
+<h1>Mythily</h1>
+<h3>comedy book</h3>
+<p>click pannupothu antha event nadakka event handler use pannanum.
+click pannupothu antha event nadakka event handler use pannanum.
+click pannupothu antha event nadakka event handler use pannanum.
+click pannupothu antha event nadakka event handler use pannanum.</p> <br>
+<button onclick="deleteitem(event)">Delete</button>
+</div>
+</div>
+
+<button class="add-button" id="add-popup-button" onclick="showpopup()">+</button>
+
+<div class="overlay"></div>
+<div class="popupbox">
+
+<input type="text" placeholder="Bookname" id="book-name-input"><br><br>
+<input type="text" placeholder="author" id="author-name-input"> <br><br>
+<textarea placeholder="Description" id="description-input"></textarea> <br><br>
+<button id="add-book" onclick="addpopup()">Add</button>
+<button id="cancel-popup" onclick="cancelpopup()" >Cancel</button>
+
+</div>
+
+</body>
+</html>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+}
+
+nav{
+background-color:red;
+padding:15px;
+}
+
+.container-book{
+border:2px solid;
+width:25%;
+margin:30px;
+padding:20px;
+background-color:black;
+color:white;
+border-radius:20px;
+border:none;
+display:inline-block;
+vertical-align:top;
+
+}
+.container-book h1{
+padding-bottom:10px;
+color:red;
+}
+
+.container-book h3{
+padding-bottom:10px;
+color:yellow;
+
+}
+
+button{
+padding:5px;
+background-color:red;
+color:white;
+border:none;
+border-radius:5px;
+}
+p{
+text-align:justify;
+}
+.add-button{
+  background-color:red;
+  color:black;
+  border-radius:100%;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:30px;
+  padding-left:30px;
+  border:none;
+  position:fixed;
+  bottom:30px;
+  font-size:30px;
+  right:30px;
+}
+
+.overlay{
+background-color:black;
+position:absolute;
+top:0;
+right:0;
+width:100%;
+height:100%;
+opacity:0.8;
+z-index:1;
+display:none;
+}
+
+.popupbox{
+
+position:absolute;
+width:400px;
+padding:40px;
+background-color:red;
+border-radius:10px;
+top:20%;
+left:30%;
+z-index:2;
+padding:30px;
+display:none;
+
+}
+
+.popupbox input{
+padding:10px;
+width:100%;
+background:transparent;
+border:none;
+font-size:20px;
+border-bottom:2px solid black;
+
+}
+
+.popupbox textarea{
+padding:10px;
+width:100%;
+background:transparent;
+border:none;
+font-size:20px;
+border:2px solid black;
+
+}
+.popupbox input::placeholder{
+color:black;
+}
+
+textarea::placeholder{
+color:black;
+}
+.popupbox button{
+background-color:black;
+color:white;
+padding:10px;
+width:80px;
+border:none;
+border-radius:5px;
+}
+
+.popupbox input:focus{
+outline:none;
+}
+.popupbox textarea:focus{
+outline:none;
+}
+</style>
+
+<script>
+
+var popupoverlay=document.querySelector(".overlay")
+var popupbox=document.querySelector(".popupbox")
+var addpopupbutton= document.getElementById("add-popup-button")
+
+function showpopup(){
+
+popupoverlay.style.display="block";
+popupbox.style.display="block";
+}
+
+function cancelpopup(){
+popupoverlay.style.display="none";
+popupbox.style.display="none";
+}
+
+var container=document.querySelector(".container")
+var addbook=document.getElementById("add-book")
+var booknameinput=document.getElementById("book-name-input")
+var authornameinput=document.getElementById("author-name-input")
+var descriptioninput=document.getElementById("description-input")
+
+function addpopup(){
+
+var div=document.createElement("div")
+div.setAttribute("class","container-book")
+div.innerHTML=`<h1>${booknameinput.value}</h1>
+<h3>${authornameinput.value}</h3>
+<p>${descriptioninput.value}</p> <br>
+<button onclick="deleteitem(event)">Delete</button>`
+container.append(div)
+
+popupoverlay.style.display="none";
+popupbox.style.display="none";
+
+}
+
+function deleteitem(event){
+
+event.target.parentElement.remove()
+}
+
+</script>      
